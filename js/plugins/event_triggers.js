@@ -1,3 +1,6 @@
+var selector;
+import { $$ } from "..\\lib\\mootools.js";
+
 /*------------------------------------------------------------------------------------
   Plugin: EventTriggers
   Description: Behaviour (http://ripcord.co.nz/behaviour/) inspired event triggers
@@ -5,7 +8,7 @@
   Dependencies: mootools.v1.2 
 ------------------------------------------------------------------------------------*/
 
-var EventTriggers = {
+export var EventTriggers = {
 	triggers : [],
 	
 	register : function(sheet){
@@ -27,6 +30,6 @@ var EventTriggers = {
 	    }
 	  });
 	}
-}
+};
 
 EventTriggers.start();

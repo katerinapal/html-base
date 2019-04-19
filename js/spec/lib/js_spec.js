@@ -1,3 +1,24 @@
+var key;
+var name;
+var expect;
+export var value_of;
+var behavior_of;
+export var describe;
+var inspected;
+var o;
+var styleStr;
+var html;
+var sb;
+var actualHasItem;
+var expectedHasItem;
+var matches;
+var mode;
+var container;
+var errors;
+var failures;
+var result;
+var ex;
+import { diff_match_patch } from ".\\diff_match_patch.js";
 /**
  * JSSpec
  *
@@ -55,10 +76,10 @@ JSSpec.Executor = function(target, onSuccess, onException) {
 	if(JSSpec.Browser.Trident) {
 		// Exception handler for Trident. It helps to collect exact line number where exception occured.
 		window.onerror = function(message, fileName, lineNumber) {
-			var self = window._curExecutor;
-			var ex = {message:message, fileName:fileName, lineNumber:lineNumber};
+            var self = window._curExecutor;
+            export var ex = {message:message, fileName:fileName, lineNumber:lineNumber};
 
-			if(JSSpec._secondPass)  {
+            if(JSSpec._secondPass)  {
 				ex = self.mergeExceptions(JSSpec._assertionFailure, ex);
 				delete JSSpec._secondPass;
 				delete JSSpec._assertionFailure;
@@ -72,8 +93,8 @@ JSSpec.Executor = function(target, onSuccess, onException) {
 				self.onException(self, ex);
 			}
 
-			return true;
-		};
+            return true;
+        };
 	}
 };
 JSSpec.Executor.prototype.mergeExceptions = function(assertionFailure, normalException) {

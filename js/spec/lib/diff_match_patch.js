@@ -1,3 +1,98 @@
+var op;
+var coords2;
+var coords1;
+var textline;
+var precontext;
+var start1;
+var diff_text;
+var empty;
+var start2;
+var nullPadding;
+var index1;
+var index2;
+var text;
+var patches;
+var char_count2;
+var char_count1;
+var prepatch_text;
+var patchDiffLength;
+var patch;
+var postpatch_text;
+var pattern;
+var padding;
+var last_rd;
+var start;
+var bin_max;
+var bin_mid;
+var bin_min;
+var best_loc;
+var score_threshold;
+var score_text_length;
+var loc;
+var delta;
+var i;
+var last_chars2;
+var last_chars1;
+var chars2;
+var chars1;
+var post_ins;
+var equalitiesLength;
+var pre_del;
+var pre_ins;
+var bestEquality2;
+var bestEdit;
+var bestEquality1;
+var bestScore;
+var equality2;
+var edit;
+var equality1;
+var changes;
+var lastequality;
+var length_changes2;
+var length_changes1;
+var text2_b;
+var text2_a;
+var text1_b;
+var text1_a;
+var hm;
+var best_shorttext_b;
+var best_shorttext_a;
+var best_longtext_b;
+var best_longtext_a;
+var best_common;
+var pointerend;
+var pointermid;
+var pointermax;
+var pointerstart;
+var pointermin;
+var last_op;
+var v_map1;
+var v_map2;
+var done;
+var footstep;
+var y;
+var x;
+var k;
+var chars;
+var lineStart;
+var lineEnd;
+var count_delete;
+var count_insert;
+var pointer;
+var text_delete;
+var text_insert;
+var linearray;
+var checklines;
+var longtext;
+var diffs;
+var commonlength;
+var text2;
+var text1;
+var opt_checklines;
+var newi;
+var oldi;
+import { ex } from ".\\js_spec.js";
+
 /**
  * Diff Match and Patch
  *
@@ -27,7 +122,7 @@
  * Class containing the diff, match and patch methods.
  * @constructor
  */
-function diff_match_patch() {
+export function diff_match_patch() {
 
   // Defaults.
   // Redefine these in your program to override the defaults.

@@ -1,3 +1,9 @@
+var linkSelected;
+import { Class } from "..\\lib\\mootools.js";
+import { $extend } from "..\\lib\\mootools.js";
+import { $$ } from "..\\lib\\mootools.js";
+import { $ } from "..\\lib\\mootools.js";
+
 /*------------------------------------------------------------------------------------
   Plugin: Tabs
   Description: Just some basic tabs
@@ -5,7 +11,7 @@
   Dependencies: mootools.v1.2
 ------------------------------------------------------------------------------------*/
 
-var Tabs = new Class({
+export var Tabs = new Class({
   triggers: [],
   containers: {},
   selectedContainer: null,

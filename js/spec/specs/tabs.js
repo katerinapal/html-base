@@ -1,3 +1,8 @@
+import { value_of } from "..\\lib\\js_spec.js";
+import { describe } from "..\\lib\\js_spec.js";
+import { insertPartial } from "..\\helpers\\insert_partial.js";
+import { Tabs } from "..\\..\\plugins\\tabs.js";
+import { $ } from "..\\..\\lib\\mootools.js";
 /*
 	Specs for Tabs (plugins/tabs.js)
 */
